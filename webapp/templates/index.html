@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="../../examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link href="../../dist/css/bootstrap.min.css" rel="stylesheet" >
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+    <!-- Favicons -->
+
+<link rel="apple-touch-icon" href="../../assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="../../assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="../../assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="../../assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="../../assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="../../assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="../../assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      /* styles.css */
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-collapse .container-fluid {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid #55595c;
+}
+
+.navbar-collapse h4 {
+  color: #818a91;
+}
+
+.navbar-collapse .text-muted {
+  color: #818a91;
+}
+
+.about {
+  float: left;
+  max-width: 30rem;
+  margin-right: 3rem;
+}
+
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+  background: url(https://www.jasonrawson.co.uk/wp-content/uploads/2014/12/carpenter.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+  background: rgba(255,255,255,0.2);
+  padding: 2rem;
+  color: white;
+}
+
+.jumbotron p {
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.album {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+  max-width: 100%;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="your_url">
+    <input type="submit" name="">
+</form>
+<main role="main">
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+      {% for i in value %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img 
+            class="bd-placeholder-img card-img-top" 
+            width="300" 
+            height="100%" 
+            src="{{i}}" 
+            preserveAspectRatio="xMidYMid slice" 
+            focusable="false" 
+            role="img" 
+            aria-label="Placeholder: Thumbnail">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c"/>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="../../assets/js/vendor/jquery.slim.min.js" ></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../../dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script></body>
+</html>
+
+
+
+</html>
