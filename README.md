@@ -1,1 +1,1 @@
-﻿# A basic django app for scrapping images.
+﻿# A basic django app for scrapping images
