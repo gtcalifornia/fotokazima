@@ -1,1 +1,4 @@
-﻿# A basic django app for scrapping images
+﻿# 
+### About
+
+- A basic django app for scrapping images
